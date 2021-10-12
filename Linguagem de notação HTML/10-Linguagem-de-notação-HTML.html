@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Cadastro de Usuário</title>
+        <meta property="og:title" content="Áudio e Vídeo">
+        <meta property="og:url" content="https://athoszxz.github.io/index.html">
+        <meta property="og:image" content="https://athoszxz.github.io/icone.jpg">
+        <meta property="og:description" content="Teste dos Elementos HTML de Áudio e Vídeo">
+    </head>
+    <body>
+        <h1>Teste de Áudio e Vídeo</h1>
+        <fieldset> 
+            <legend>Áudio:</legend>
+            <h3>Áudio via url:</h3>
+            <audio controls>
+                <source src="https://65381g.ha.azioncdn.net/e/5/0/0/skayraoficial-pesadelo-feat-andre-carvalho-916fcf35.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            <br/>
+            <h3>Áudio via arquivo local:</h3>
+            <audio controls>
+                <source src="m4sonic.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </fieldset>
+        <br/>
+        <fieldset> 
+            <legend>Vídeo:</legend>
+            <h3>Vídeo via url:</h3>
+            <video width="400" controls >
+                <source src="https://dn2.newtumbl.com/img/817149/106364550/1/151500491/nT_gk6g8ye0sbprr4nj2jy7kqq0.mp4" type="video/mp4">
+                <track src="MyClosedCaptions_en.vtt" kind="captions" srclang="en" label="English" default >
+                Your browser does not support HTML video.
+            </video>
+            <br/>
+            <h3>Vídeo via arquivo local:</h3>
+            <video width="400" controls preload="metadata" >
+                <source src="bb.mp4" type="video/mp4">
+                <track src="MyClosedCaptions_en.vtt" kind="captions" srclang="en" label="English"  crossorigin="anonymous" default >
+                Your browser does not support HTML video.
+            </video>
+        </fieldset>
+    </body>
+</html>
