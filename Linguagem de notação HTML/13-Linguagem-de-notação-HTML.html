@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Aprendendo Canvas</title>
+        <meta property="og:title" content="SVG">
+        <meta property="og:url" content="https://athoszxz.github.io/index.html">
+        <meta property="og:image" content="https://athoszxz.github.io/icone.jpg">
+        <meta property="og:description" content="Teste de Canvas">
+    </head>
+    <body>
+        <button onclick="document.location='https://athoszxz.github.io/'">Voltar</button> 
+        
+        <h1>Teste de Canvas</h1>
+        
+        <div id="sliderHorizontal">
+            <h2>Horizontal</h2>
+            <input type="range"  id="rangeInputH" value="24" min="1" max="100" oninput="this.nextElementSibling.value = this.value">
+            <output>24</output>
+        </div>
+        <br/>
+        <div id="sliderVertical">
+            <h2>Verical</h2>
+            <input type="range"  id="rangeInputV" value="24" min="1" max="100" oninput="this.nextElementSibling.value = this.value">
+            <output>24</output>
+        </div>
+        <br/>
+        <canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
+
+        <script>
+            var rangeInputH = document.getElementById("rangeInputH");
+            var rangeInputV = document.getElementById("rangeInputV");
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.font = "50px Arial";
+            ctx.fillText("☻",rangeInputH.value,rangeInputV.value);
+
+            rangeInputH.addEventListener('mousemove', function() {
+                ctx.clearRect(0, 0, 200, 100);
+                ctx.fillText("☻",rangeInputH.value,rangeInputV.value);
+            });
+
+            rangeInputV.addEventListener('mousemove', function() {
+                ctx.clearRect(0, 0, 200, 100);
+                ctx.fillText("☻",rangeInputH.value,rangeInputV.value);
+            });
+        </script>
+    </body>
+</html>

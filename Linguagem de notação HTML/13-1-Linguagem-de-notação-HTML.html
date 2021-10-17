@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Aprendendo Canvas</title>
+        <meta property="og:title" content="SVG">
+        <meta property="og:url" content="https://athoszxz.github.io/index.html">
+        <meta property="og:image" content="https://athoszxz.github.io/icone.jpg">
+        <meta property="og:description" content="Teste de Canvas">
+    </head>
+    <body>
+        <button onclick="document.location='https://athoszxz.github.io/'">Voltar</button> 
+            
+        <h1>Teste de Canvas</h1>
+        <canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
+        Your browser does not support the HTML canvas tag.</canvas>
+
+        <br/>
+        <label for="vontade">Vontade:</label>
+        <input type="range" id="vontade" name="vontade" value=10 min="1" max="100" oninput="this.nextElementSibling.value = this.value">
+        <div id="vontadeNumber">1</div>
+        
+        <br/>
+        <label for="determinacao">Determinação:</label>
+        <input type="range" id="determinacao" name="determinacao" value=10 min="1" max="100" oninput="this.nextElementSibling.value = this.value">
+        <div id="determinacaoNumber">1</div>
+        
+        <br/>
+        <label for="determinacao">Animação:</label>
+        <input type="range" id="animacao" name="determinacao" value=10 min="1" max="100" oninput="this.nextElementSibling.value = this.value">
+        <div id="animacaoNumber">1</div>
+
+        <script>
+
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        var vontade = document.getElementById("vontade");
+        var determinacao = document.getElementById("determinacao");
+        var animacao = document.getElementById("animacao");
+        ctx.font = "50px Arial";
+        
+        vontade.addEventListener('mousemove', function() {
+            ctx.clearRect(0, 0, 29, 100);
+            document.getElementById("vontadeNumber").innerHTML = vontade.value;
+                
+            ctx.beginPath();
+            ctx.strokeStyle = 'red';
+            ctx.moveTo(30,100);
+            ctx.strokeRect(10, 101-vontade.value, 10, 100);
+            ctx.closePath();
+            ctx.stroke();
+        });
+
+        determinacao.addEventListener('mousemove', function() {
+            ctx.clearRect(29, 0, 12, 100);
+            document.getElementById("determinacaoNumber").innerHTML = determinacao.value;
+                
+            ctx.beginPath();
+            ctx.strokeStyle = 'blue';
+            ctx.moveTo(30,100);
+            ctx.strokeRect(30, 101-determinacao.value, 10, 100);
+            ctx.closePath();
+            ctx.stroke();
+        });
+
+        animacao.addEventListener('mousemove', function() {
+            ctx.clearRect(49, 0, 12, 100);
+            document.getElementById("animacaoNumber").innerHTML = animacao.value;
+                
+            ctx.beginPath();
+            ctx.strokeStyle = 'green';
+            ctx.moveTo(30,100);
+            ctx.strokeRect(50, 101-animacao.value, 10, 100);
+            ctx.closePath();
+            ctx.stroke();
+
+            if(animacao.value >= 50 && animacao.value <= 80){
+                ctx.clearRect(70, 0, 124, 100);
+                ctx.font = "50px Arial";
+                ctx.fillText("☺",75,50);
+                ctx.fillText("☻",125,50);
+                ctx.fillText("☻",100,80);
+                ctx.fillText("☺",150,80);
+            }
+            else if (animacao.value > 80){
+                ctx.clearRect(70, 0, 124, 100);
+                ctx.font = "20px Arial";
+                ctx.fillText("ANIMAÇÃO!",75,50);
+            }
+            else{
+                ctx.clearRect(70, 0, 124, 100);
+            }
+        });
+
+        </script>
+
+    </body>
+</html>
