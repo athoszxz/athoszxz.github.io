@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Aprendendo CSS</title>
+        <meta property="og:title" content="SVG">
+        <meta property="og:url" content="https://athoszxz.github.io/index.html">
+        <meta property="og:image" content="https://athoszxz.github.io/icone.jpg">
+        <meta property="og:description" content="Aprendendo CSS">
+        <style>
+            #prg {
+                background-color: rgb(159, 245, 219);
+            }           
+            .change {
+                color: rgb(207, 0, 0);   
+            } 
+            [title] {
+                text-decoration: underline;
+            }
+            a + p{
+                color:blueviolet;
+            }
+            a:hover {
+                color: rgb(255, 0, 179);
+            }
+            #p-e:first-letter{
+                color: rgb(164, 175, 7);
+                text-transform: uppercase;
+            }
+        </style>
+    </head>
+    <body>
+        <button onclick="document.location='https://athoszxz.github.io/'">Voltar</button> 
+        
+        <h1>Seletores em CSS</h1>
+        <p>Com id eu modifiquei a cor do plano de fundo para verde, com class eu colori a fonte de vermelho, todos com atributo title são sublinhados, com combinators eu colori a fonte de
+            violeta, com pseudo-classe eu faço o link ficar rosa ao passar o mouse em cima e com pseudo-elemento eu faço toda primeira letra de um elemento com id="pe" ficar amarela.
+        </p>
+        <br/>
+        <p id="prg" class="change" title="Parágrafo 1">Parágrafo com id="prg", class="change" e title="Parágrafo 1"</p>
+
+        <p class="change" title="Parágrafo 1">Parágrafo com class="change" e title="Parágrafo 1"</p>
+
+        <p title="Parágrafo 1">Parágrafo apenas com title="Parágrafo 1"</p>
+
+        <p id="prg" >Parágrafo apenas com id="prg"</p>
+
+        <p class="change">Parágrafo apenas com class="change"</p>
+        <br/>
+        
+        <a href="https://www.google.com/">link para o Google</a> 
+        <p>Este é um parágrafo que vem após um link, por isso é afetado pelo seletor combinators a+p</p>
+
+        <p id="p-e">Este é um parágrafo que tem o id ="p-e" e por isso é afetado pelo seletor de pseudo-elemento</p>
+
+    </body>
+</html>
