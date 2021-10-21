@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Aprendendo CSS</title>
+        <meta property="og:title" content="SVG">
+        <meta property="og:url" content="https://athoszxz.github.io/index.html">
+        <meta property="og:image" content="https://athoszxz.github.io/icone.jpg">
+        <meta property="og:description" content="Aprendendo CSS">
+        <style>
+            .box1 {
+                border: 1px solid #333333;
+                width: 200px;
+                height: 100px;
+                overflow: visible;
+            }
+            .box2 {
+                border: 1px solid #333333;
+                width: 200px;
+                height: 100px;
+                overflow: hidden;
+            }
+            .box3 {
+                border: 1px solid #333333;
+                width: 200px;
+                height: 100px;
+                overflow: scroll;
+            }
+            .box4 {
+                border: 1px solid #333333;
+                width: 200px;
+                height: 100px;
+                overflow: auto;
+            }
+
+        </style>
+    </head>
+    <body>
+        <button onclick="document.location='https://athoszxz.github.io/'">Voltar</button> 
+        
+        <h1>Modelo de caixa em CSS (OverFlow)</h1>
+        <h3>Exemplo com overflow: visible</h3>
+        <div class="box1">  
+            Esta caixa tem uma altura e uma largura. Isso significa 
+            que se houver muito conteúdo a ser exibido dentro da altura atribuída, 
+            haverá uma situação de estouro. Como o estouro está definido como visível, 
+            qualquer estouro ficará visível.
+        </div>
+        
+        <br/><br/><br/>
+        <h3>Exemplo com overflow: hidden</h3>
+        <div class="box2">  
+            Esta caixa tem uma altura e uma largura. Isso significa 
+            que se houver muito conteúdo a ser exibido dentro da altura atribuída, 
+            haverá uma situação de estouro. Aqui o estouro está definido como oculto, 
+            logo, qualquer estouro não ficará visível.
+        </div>
+        
+        <br/>
+        <h3>Exemplo com overflow: scroll</h3>
+        <div class="box3">  
+            Esta caixa tem uma altura e uma largura. Isso significa 
+            que se houver muito conteúdo a ser exibido dentro da altura atribuída, 
+            haverá uma situação de estouro. Como o estouro estiver definido como scroll, 
+            aparecerá uma barra de scroll para controlar o estouro.
+        </div>
+
+        <br/>
+        <h3>Exemplo com overflow: auto</h3>
+        <div class="box4">  
+            Esta caixa tem uma altura e uma largura. Isso significa 
+            que se houver muito conteúdo a ser exibido dentro da altura atribuída, 
+            haverá uma situação de estouro. Como o estouro está definido como auto, 
+            o navegador identificará automaticamente uma situação de estouro e colocará um scroll caso necessário.
+        </div>
+    </body>
+</html>
