@@ -103,12 +103,13 @@ body {
 .info-section span {
 	position: relative;
 	transition: all 0.3s;
+    margin-left: 0.3rem;
 }
 .info-section i {
 	color: var(--profile-theme);
 	width: 20px;
 	height: 20px;
-    margin-right: 1px;
+    
 }
 
 .link a {
