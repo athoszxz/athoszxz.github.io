@@ -1,0 +1,162 @@
+</style>
+</html>
+</style>
+</html>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Aprendendo CSS</title>
+        <meta property="og:title" content="SVG">
+        <meta property="og:url" content="https://athoszxz.github.io/index.html">
+        <meta property="og:image" content="https://athoszxz.github.io/icone.jpg">
+        <meta property="og:description" content="Aprendendo CSS">
+        <style>
+            body{
+                width: 470px;
+            }
+            /* Cores Hexadecimais */
+            #p1 {background-color:#ff0000;}
+            #p2 {background-color:#00ff00;}
+            #p3 {background-color:#0000ff;}
+            #p4 {background-color:#ffff00;}
+            #p5 {background-color:#ff00ff;}
+
+            /* Cores Hexadecimais com Transparência  */
+            #p1a {background-color:#ff000080;}
+            #p2a {background-color:#00ff0080;}
+            #p3a {background-color:#0000ff80;}
+
+            /* Cores RGB */
+            #rgbap1 {background-color:rgb(255,0,0);}
+            #rgbap2 {background-color:rgb(0,255,0);}
+            #rgbap3 {background-color:rgb(0,0,255);}
+            #rgbap4 {background-color:rgb(192,192,192);}
+
+            /* Cores RGB com Transparência  */
+            #rgbap1a {background-color:rgb(255,0,0,0.5);}
+            #rgbap2a {background-color:rgb(0,255,0,0.5);}
+            #rgbap3a {background-color:rgb(0,0,255,0.5);}
+            #rgbap4a {background-color:rgb(192,192,192,0.5);}
+
+            /* Cores HSL */
+            #hslp1 {background-color:hsl(120,100%,50%);}
+            #hslp2 {background-color:hsl(120,100%,75%);}
+            #hslp3 {background-color:hsl(120,100%,25%);}
+            #hslp4 {background-color:hsl(120,60%,70%);}
+            #hslp5 {background-color:hsl(290,100%,50%);}
+            #hslp6 {background-color:hsl(290,60%,70%);}
+
+            /* Cores HSL com Transparência  */
+            #hslap1 {background-color:hsla(120,100%,50%,0.3);}
+            #hslap2 {background-color:hsla(120,100%,75%,0.3);}
+            #hslap3 {background-color:hsla(120,100%,25%,0.3);}
+            #hslap4 {background-color:hsla(120,60%,70%,0.3);}
+            #hslap5 {background-color:hsla(290,100%,50%,0.3);}
+            #hslap6 {background-color:hsla(290,60%,70%,0.3);}
+
+            /* Cores Pré-definidas pelo Browser  */
+            #brwp1 {background-color: blue;}
+            #brwp2 {background-color: red;}
+            #brwp3 {background-color: coral;}
+            #brwp4 {background-color: brown;}
+
+            /* A Palavra chave "Cor Atual" / currentcolor  */
+            #ccp1 {color: blue; border: 10px solid currentcolor;}
+            #ccp2 {color: red; border: 10px solid currentcolor;}
+        
+        </style>
+    </head>
+    <body>
+        <button onclick="document.location='https://athoszxz.github.io/'">Voltar</button> 
+        
+        <h1>Cores em CSS</h1>
+        <br/>
+
+        <h2>Cores Hexadecimais</h2>
+        <p>Uma cor hexadecimal é especificada com: #RRGGBB, onde os inteiros hexadecimais 
+            RR (vermelho), GG (verde) e BB (azul) especificam os componentes da cor. 
+            Todos os valores devem estar entre 00 e FF.</p>
+        <p id="p1">Vermelho #ff0000</p>
+        <p id="p2">Verde #00ff00</p>
+        <p id="p3">Azul #0000ff</p>
+        <p id="p4">Amarelo #ffff00</p>
+        <p id="p5">Violeta #ff00ff</p>
+        
+        <br/>
+        <h2>Cores Hexadecimais com Transparência </h2>
+        <p>Para adicionar transparência, adicione ao final dois dígitos adicionais entre 00 e FF, 
+            este corresponde a opacidade. Neste caso coloquei 80% de opacidade</p>
+        <p id="p1">Vermelho</p>
+        <p id="p1a">Vermelho com Transparência #ff000080</p>
+        <p id="p2">Verde</p>
+        <p id="p2a">Verde com Transparência #00ff0080</p>
+        <p id="p3">Azul</p>
+        <p id="p3a">Azul com Transparência #0000ff80</p>
+        
+        <br/>
+        <h2>Cores RGB</h2>
+        <p>Uma cor RGB é especificada com: rgb(RR,GG,BB), onde os inteiros RR, GG e BB 
+            especificam os componentes da cor. Todos os valores devem estar entre 0 e 255.</p>
+        <p id="rgbap1">Vermelho #rgb(255,0,0)</p>
+        <p id="rgbap2">Verde #rgb(0,255,0)</p>
+        <p id="rgbap3">Azul #rgb(0,0,255)</p>
+        <p id="rgbap4">Cinza #rgb(192,192,192)</p>
+
+        <br/>
+        <h2>Cores RGB com Transparência (RGBA) </h2>
+        <p>Para adicionar transparência, adicione ao final um dígito adicional entre 0 e 1, 
+            este corresponde a opacidade. Neste caso coloquei 0.5 de opacidade.</p>
+        <p id="rgbap1a">Vermelho com Transparência #rgb(255,0,0,0.5)</p>
+        <p id="rgbap2a">Verde com Transparência #rgb(0,255,0,0.5)</p>
+        <p id="rgbap3a">Azul com Transparência #rgb(0,0,255,0.5)</p>
+        <p id="rgbap4a">Cinza com Transparência #rgb(192,192,192,0.5)</p>
+
+        <br/>
+        <h2>Cores HSL</h2>
+        <p>Uma cor HSL é especificada com: hsl(H,S,L), onde os inteiros H, S e L 
+            especificam os componentes da cor. Todos os valores devem estar entre 0 e 360, 
+            0 e 100 e 0 e 100.</p>
+        <p id="hslp1">Verde #hsl(120,100%,50%)</p>
+        <p id="hslp2">Verde Claro #hsl(120,100%,75%)</p>
+        <p id="hslp3">Verde Escuro #hsl(120,100%,25%)</p>
+        <p id="hslp4">Verde Pastel #hsl(120,60%,70%)</p>
+        <p id="hslp5">Violeta #hsl(290,100%,50%)</p>
+        <p id="hslp6">Violeta Pastel #hsl(290,60%,70%)</p>
+
+        <br/>
+        <h2>Cores HSL com Transparência (HSLA) </h2>
+        <p>Para adicionar transparência, adicione ao final um dígito adicional entre 0 e 1, 
+            este corresponde a opacidade. Neste caso coloquei 0.3 de opacidade.</p>
+        <p id="hslap1">Verde com Transparência #hsl(120,100%,50%,0.3)</p>
+        <p id="hslap2">Verde Claro com Transparência #hsl(120,100%,75%,0.3)</p>
+        <p id="hslap3">Verde Escuro com Transparência #hsl(120,100%,25%,0.3)</p>
+        <p id="hslap4">Verde Pastel com Transparência #hsl(120,60%,70%,0.3)</p>
+        <p id="hslap5">Violeta com Transparência #hsl(290,100%,50%,0.5)</p>
+        <p id="hslap6">Violeta Pastel com Transparência #hsl(290,60%,70%,0.3)</p>
+
+        <br/>
+        <h2>Cores Pré-definidas pelo Browser </h2>
+        <p>140 nomes de cores são predefinidos na especificação de cores HTML e CSS. Segue abaixo alguns exemplos.</p>
+        <p id="brwp1">Azul</p>
+        <p id="brwp2">Vermelho</p>
+        <p id="brwp3">Coral/Laranja</p>
+        <p id="brwp4">Marrom</p>
+
+        <br/>
+        <h2>A Palavra chave "Cor Atual"/"currentcolor"</h2>
+        <p>A palavra chave currentcolor é usada para indicar que a cor deve ser a cor atual do elemento. 
+            Por exemplo, se o elemento estiver em uma cor vermelha, o valor de cor do elemento será vermelho.</p>
+        <div id="ccp1">
+            Este elemento Div é azul, usando "currentcolor" na borda faz ela ficar azul também.
+        </div>
+        <br/>
+        <div id="ccp2">
+            Este elemento Div é vermelho, usando "currentcolor" na borda faz ela ficar vermelho também.
+        </div>
+
+
+
+    </body>
+
+</html>

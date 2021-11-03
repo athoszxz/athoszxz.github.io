@@ -1,0 +1,73 @@
+</style>
+</html>
+</style>
+</html>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Aprendendo CSS</title>
+        <meta property="og:title" content="SVG">
+        <meta property="og:url" content="https://athoszxz.github.io/index.html">
+        <meta property="og:image" content="https://athoszxz.github.io/icone.jpg">
+        <meta property="og:description" content="Aprendendo CSS">
+        <style>
+            .box {
+                border-style: solid;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-evenly;
+                width: 500px;
+                height: 400px;
+            }
+            
+            .box img {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .box div{
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                border: solid;
+            }
+
+        </style>
+    </head>
+    <body>
+        <button onclick="document.location='https://athoszxz.github.io/'">Voltar</button> 
+        
+        <h1>Flex Box CSS (Parte 2)</h1>
+        
+        <br/>
+        <h2>Utilizando wrap</h2>
+
+        <p>Ao utilizar flex-wrap: wrap; no elemento pai, os elementos filhos organizam-se automaticamente. </p>
+        <h3>Exemplo 1 (div-box + imagem)</h3>
+        <div class="box">
+            <div></div>
+            <img src="pika.png" alt="Pikachu">  
+        </div>
+        <h3>Exemplo 2 (div-box + 3 imagens)</h3>
+        <div class="box">
+            <div></div>
+            <img src="pika.png" alt="Pikachu">  
+            <img src="charmilion.png" alt="Charmilion"> 
+            <img src="poli.png" alt="Poli"> 
+        </div>
+
+        <h3>Exemplo 3 (2 div-box + 4 imagens)</h3>
+        <div class="box">
+            <div></div>
+            <img src="pika.png" alt="Pikachu">  
+            <img src="charmilion.png" alt="Charmilion"> 
+            <img src="poli.png" alt="Poli"> 
+            <img src="drag.png" alt="Drag"> 
+            <div></div>
+        </div>
+    </body>
+
+</html>

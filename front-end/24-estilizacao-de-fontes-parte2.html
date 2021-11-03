@@ -1,0 +1,54 @@
+</style>
+</html>
+</style>
+</html>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Aprendendo CSS</title>
+        <meta property="og:title" content="SVG">
+        <meta property="og:url" content="https://athoszxz.github.io/index.html">
+        <meta property="og:image" content="https://athoszxz.github.io/icone.jpg">
+        <meta property="og:description" content="Aprendendo CSS">
+        <style>
+            #seta {
+                list-style-image: url("seta.png");
+
+            }
+        </style>
+    </head>
+    <body>
+        <button onclick="document.location='https://athoszxz.github.io/'">Voltar</button> 
+        
+        <h1>Estilização de fontes em CSS - parte 2</h1>
+        <br/>
+        <h3>Lista não-ordenada:</h3>
+        <p>Na lista de países, cada país pode ter uma sub-lista de estados e cada estado pode 
+            ter uma outra sub-lista de bairros por exemplo, quanto mais interna for a 
+            sublista o icone é modificado, bola cheia, bola vazia, quadrado cheio. Além disso, 
+            é possível adicionar imagens como fiz nos bairros do Rio de Janeiro.</p>
+        <ul>
+            <li>Japão</li>
+            <li>Brasil
+              <ul>
+                <li>São Paulo
+                    <ul>
+                        <li>Vila Mariana</li>
+                        <li>Vila Guilherme</li>
+                        <li>Vila Guilherme</li>
+                    </ul>
+                </li>
+                <li>Rio de Janeiro
+                  <ul id="seta">
+                    <li>Botafogo</li>
+                    <li>Campo Grande</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>Canadá</li>
+        </ul> 
+
+    </body>
+</html>
