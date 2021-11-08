@@ -5,6 +5,10 @@
     --tooltip-arrow-size: 6px;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 .Title { 
     font:normal normal bold 17px/1.4em tahoma,tahoma-w01-regular,tahoma-w02-regular,tahoma-w10-regular,tahoma-w15--regular,tahoma-w99-regular,sans-serif; 
 } 
@@ -294,7 +298,6 @@ a {
     justify-content: center;
     align-items: center;
     padding: 1.4rem;
-    height: 120px;
 
 }
 
