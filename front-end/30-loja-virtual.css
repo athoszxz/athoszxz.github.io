@@ -162,7 +162,7 @@ a {
 .grid2 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 40px);
+    grid-template-rows: repeat(1, 40px);
     max-width: 1000px;
     grid-gap: 1rem;
     margin: 0 auto;
@@ -175,24 +175,30 @@ a {
     padding:0;
     margin: 0;
     overflow: hidden;
+    
 }
 
 .grid2 > article > img {
     padding:0;
     margin: 0;
     max-width: 100%;
-    display: block;
+    max-height: 100%;
 }
 
 .grid2 > article > img:hover {
     
     transition: transform calc(.25s * 3) ease;
     transform: scale(1.07);
-
 }
 
+/*.grid2 > article > img {
+    
+    transition: transform calc(.25s * 3);
+    transform: scale(1);
+}*/
+
 .produto3 {
-    grid-row: span 11;
+    grid-row: span 10;
     overflow: hidden;
 }
 .produto4 {
@@ -202,25 +208,63 @@ a {
 
 .produto5 {
     overflow: hidden;
-    grid-row: span 3;
+    grid-row: span 4;
 }
 
 .produto6 {
-    grid-row: span 8;
+    grid-row: span 6;
     overflow: hidden;
 }
 .produto7 {
-    grid-row: span 6;
+    grid-row: span 5;
     overflow: hidden;
 }
 .produto8 {
     overflow: hidden;
+    grid-row: span 4;
 }
 .produto9 {
+    grid-row: span 11;
     overflow: hidden;
 }
 
 .produto10 {
+    grid-row: span 5;
+    overflow: hidden;
+}
+
+.produto11 {
+    grid-row: span 7;
+    overflow: hidden;
+}
+
+.produto12 {
+    grid-row: span 6;
+    overflow: hidden;
+}
+
+.produto13 {
+    grid-row: span 9;
+    overflow: hidden;
+}
+
+.produto14 {
+    grid-row: span 5;
+    overflow: hidden;
+}
+
+.produto15 {
+    grid-row: span 4;
+    overflow: hidden;
+}
+
+.produto16 {
+    grid-row: span 4;
+    overflow: hidden;
+}
+
+.produto17 {
+    grid-row: span 5;
     overflow: hidden;
 }
 
@@ -243,6 +287,16 @@ a {
     grid-row-end: 5;
 }
 
+.bottom {
+    background-color: #607d82;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1.4rem;
+    height: 120px;
+
+}
 
   
 @media (max-width: 600px) {
