@@ -1,3 +1,4 @@
+/*variáveis css globais*/ 
 :root {
 	--color-gray-light-1: #f8f8f8;
 	--color-gray-light-2: #e9e9e9;
@@ -21,6 +22,7 @@ html {
     font-family: 'PT Sans', sans-serif;
 }
 
+/*inclui o preenchimento e a borda na largura e altura total de um elemento.*/ 
 * {
 	box-sizing: border-box;
 }
@@ -28,15 +30,16 @@ html {
 body {
 	margin: 0;
 	padding: 3rem 1rem;
-	min-height: 100vh;
+	min-height: 100vh; /*para responsividade, permite rolar elementos fixos se necessário*/ 
 	background-color: var(--color-gray-light-3);
 }
 
+/*empacotador central*/ 
 .wrapper {
 	margin: 0 auto;
-	max-width: 70rem;
+	max-width: 70rem; /*para responsividade*/ 
 	background-color: var(--color-gray-light-2);
-	display: flex;
+	display: flex; /*para responsividade*/ 
 	box-shadow: 0px 0px 15px 4px #b3b3b3;
 }
 
@@ -46,6 +49,7 @@ body {
 	box-shadow: 5px 0px 15px 0px #b3b3b3;
 	z-index: 5;
 }
+
 .profile {
 	position: relative;
 	background-color: var(--profile-theme);
@@ -138,7 +142,7 @@ body {
 	width: 100%;
 }
 
-/* Detail section overall setting*/
+/* Seção de Detalhes overall setting*/
 .detail {
 	flex: 1 0 0;
 	background-color: white;
@@ -195,7 +199,7 @@ body {
 	letter-spacing: 1.5px;
 }
 
-/* time line block in education section */
+/* time line block na seção de formação acadêmica */
 .timeline-block {
 	position: relative;
 	padding-left: 30px;
@@ -271,7 +275,7 @@ body {
 	background-color: var(--profile-theme);
 }
 
-/* Seção de Ferramentas de Desenvolvimento */
+/* !!Seção de Ferramentas de Desenvolvimento */
 .tool-list {
 	list-style: none;
 	display: flex;
@@ -301,8 +305,8 @@ body {
 	transition: all 0.8s;
 	transition-timing-function: cubic-bezier(.64,.51,.16,.86);
 }
-
-.detail-content:hover >.tool-list > li > svg > circle.cbar {
+/* interação com animação do circulo SVG*/
+.detail-content:hover> .tool-list > li  > svg > circle.cbar {
 	stroke-width: 4px;
 	stroke: var(--color-tiffany);
 	stroke-dashoffset: calc(var(--MATH-PI) * 45 * 2 * (1 - var(--percent)));
@@ -323,7 +327,7 @@ body {
 	font-size: 1rem;
 	transform: translate(-50%, -50%);
 }
-/* Interests Section */
+/* Seção Interesses */
 .outer-frame {
 	border: 1px solid var(--color-gray-dark-3);
 	border-radius: 5px;
