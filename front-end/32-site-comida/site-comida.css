@@ -1,0 +1,175 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    margin: 0;   
+}
+
+header {
+    position: sticky;  /* Trava o elemento pra não scroolar */
+    top: 0; /* Trava o elemento pra não scroolar */
+    position: -webkit-sticky; /* Trava o elemento pra não scroolar */ /* Necessário para funcionar no Safari */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px 44px 10px 80px; /* superior | direita | inferior | esquerda */
+}
+
+.title { 
+    font:normal normal normal 26px cinzel, sans-serif;
+} 
+
+.title a {
+    text-decoration: none;
+    color: rgb(48, 49, 49);
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu a {
+    font: normal normal normal 16px avenir, sans-serif;
+    text-decoration: none;
+    color: #303131;
+    padding: 10px;
+    margin: 0px 10px;
+}
+
+.menu a:hover {
+    color: #607D82;
+}
+
+.menu li{
+    list-style: none;
+    margin: 0 1.1rem; 
+}
+
+.mainGrid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0px 75px 0px 75px; /* superior | direita | inferior | esquerda */
+}
+
+.main-background-image {
+    background-image: url(./comida.webp);
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 982px;
+}
+
+.main-sombra {
+    background: rgba(39,62,84,0.30);
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    min-height: 982px;
+    z-index: 2;
+}
+
+.main-texts {
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    align-items: center; 
+}
+
+.main-title {
+    font:normal normal normal 25px cinzel, sans-serif;
+    color: #ffffff;
+    font-size: 70px;
+    margin-top: 367px;
+    margin-bottom: 0px;
+    letter-spacing:0.1em;
+    text-align: center;
+}
+
+.main-subtitle {
+    font: lighter 20px avenir, sans-serif;
+    color: white;
+    fill: white;
+    font-size: 20px;
+    letter-spacing: 0.55em;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 2rem;
+}
+
+.main-button {
+    font: lighter 16px avenir, sans-serif;
+    color: white;
+    fill: white;
+    font-size: 16px;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 0.5rem 1rem;
+    margin-top: 2rem;
+    width: 150px;
+    text-align: center;
+    align-self: center;
+    margin: 0 auto;
+}
+
+.main-button:hover {
+    font: lighter 16px avenir, sans-serif;
+    color: white;
+    fill: white;
+    background-color: rgb(48,49,49);
+    font-size: 16px;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 0.5rem 1rem;
+    margin-top: 2rem;
+    width: 150px;
+    text-align: center;
+    align-self: center;
+    margin: 0 auto;
+}
+
+.footer-social-media-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-social-media-icons a {
+    margin: 0px;
+}
+
+.footer-social-media-icons li{
+    list-style: none;
+    margin: 2rem 0.7rem 0 1rem; 
+}
+
+.footer-copyright {
+    font: normal normal normal 16px avenir, sans-serif;
+    text-align: center;
+    text-decoration: none;
+    color: #303131;
+    margin-bottom: 1.5rem;
+}
+
+
+@font-face {
+    font-family: avenir;
+    src: url('Avenir\ LT\ 35\ Light.ttf')format('opentype');
+}
+
+@font-face {
+    font-family: cinzel;
+    src: url('Cinzel-VariableFont_wght.ttf')format('opentype');
+}
