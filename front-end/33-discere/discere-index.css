@@ -1,0 +1,291 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Alef:wght@400;700&family=Righteous&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0; 
+}
+
+body {
+    padding: 0;
+    color: #cdcdcd;
+    font-family: "Avenir Next", "Avenir", sans-serif;
+}
+
+.header { 
+    background: linear-gradient(270deg, #2667CD 0%, #24FE96 100%);
+    height: 88px;
+}
+
+.logo {
+    margin-left: 100px;
+    margin-top: -17px;
+    padding: 0px;
+}
+
+h1 {
+    font-family: 'Righteous', cursive;
+    font-size: 1.1rem;
+    line-height: 19px;
+    color: #3EA1D9;
+    margin-left: 180px;
+    margin-top: -45px;
+    padding: 0px;
+}
+
+.area-busca {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 228px;
+    height: 38px;
+    background-color: white;
+    border: solid 2px #D1D1D1;
+    margin-left: 260px;
+    margin-top: -28px;
+    padding-right: 10px;
+}
+
+.area-busca img {
+    margin-left: 10px;
+}
+
+.area-busca input {
+    background-color: rgba(0,0,0,0);
+    border: none;
+    margin-left: -10px;
+    outline-style: none;
+}
+
+.denario {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 200px;
+    height: 50px;
+    padding-left: 10px;
+    color: white;
+    font-family: 'Alef', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    background: linear-gradient(269.55deg, rgba(40, 121, 216, 0.41) -3.2%, rgba(24, 206, 31, 0.76) 115.98%);
+    border-radius: 40px;
+    margin-left: 800px;
+    margin-top: -44px;
+    padding-right: 10px;
+}
+
+.bloco-nome-usuario {
+    width: 270px;
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Alef',sans-serif;
+    font-size: 1rem;
+    color: white;
+    padding-left: 53px;
+    padding-right: 126px;
+    margin-left: 1070px;
+    margin-top: -44px;
+    padding-right: 10px;
+}
+
+
+.Botao-navegacao-selecionado {
+    color: #003087;
+    font-weight: bold;
+    font-family: 'Alef',sans-serif;
+    font-size: 0.9rem;
+    line-height: 21px;
+    background-color: white;
+    height: 64px;
+    width: 255px;
+    padding-left: 20px;
+    border-left: solid #003087 3px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin:-10.5px 0px 0px -50px; /* superior | direita | inferior | esquerda */
+    padding-left: 20px;
+    
+}
+
+.Botao-navegacao-selecionado > img {
+    margin-right: 10px;
+}
+
+.Botao-navegacao-nao-selecionado {
+    color: white;
+    font-family: 'Alef',sans-serif;
+    font-size: 0.9rem;
+    line-height: 21px;
+    cursor: pointer;
+    height: 64px;
+    width: 255px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0px 0px 0px -50px; /* superior | direita | inferior | esquerda */
+    padding-left: 20px;
+}
+
+.Botao-navegacao-nao-selecionado:hover {
+    background-color: rgba(6,6,6,0.1);
+    color: white;
+}
+
+.Botao-navegacao-nao-selecionado > img {
+    margin-right: 12px;
+}
+
+/* Menu Hamburguer (ignorar essa parte até o próximo comentário com exclamações >>) !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 36px;
+  left: 50px;
+  max-width: 70px;
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: #232323;
+  
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  color: tomato;
+}
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; 
+  z-index: 2; 
+  
+  -webkit-touch-callout: none;
+}
+
+/* hamburger*/
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: white;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transforma o hamburger
+ * em um X.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #ffffff;
+}
+
+/*
+ * Esconder o botão de checkbox
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Faz a lista se esconder
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu
+{
+  position: absolute;
+  width: 255px;
+  margin: 25px 0px 0px -50px; /* superior | direita | inferior | esquerda */
+  padding: 50px;
+  padding-top: 10px;
+  padding-bottom: 500px;
+  background: linear-gradient(179.92deg, #26F391 0.07%, #2667CD 9.43%, #24FE96 99.93%);
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* para funcionar no safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * Para lista vir para a direita
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+/* Fim do Menu Hamburguer !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+.video-aula {
+    margin: 20px;
+    margin-left: 70px;
+}
+
+
+
+@font-face {
+    font-family: Alef;
+    src: url('Alef-Regular.ttf')format('opentype');
+}
