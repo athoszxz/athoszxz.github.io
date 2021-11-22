@@ -25,6 +25,26 @@ body {
     background-repeat: round;
 }
 
+.perfil {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+    background: linear-gradient(to bottom right, #eb2424 0%, #4a67ec 100%);
+    padding: 20px;
+    border-radius: 3%;
+    box-shadow: 0px 15px 30px #000000;
+    min-width: 350px;
+}
+
+.fotoperfil {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: #52c498;
+    box-shadow: 0px 1px 5px #000000;
+}
+
 .header {
     display: grid;
     grid-template-columns: 1fr;
@@ -34,6 +54,7 @@ body {
     padding: 20px;
     border-radius: 3%;
     box-shadow: 0px 15px 30px #000000;
+    min-width: 350px;
 }
 
 .cantor-foto {
