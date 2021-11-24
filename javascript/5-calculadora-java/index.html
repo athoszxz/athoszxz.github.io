@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Minha Página</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="text/javascript" src="js/main.js"></script>
+    </head>
+    <body>
+        <h1>Calculadora</h1>
+
+        <div class="Calculadora">
+            
+            <div id="telaCalculadora">
+                <p id="textoCalculadora">
+                    0
+                </p>
+            </div>
+            <button type="button" class = "bt" id="sete" onclick="digito(this)">
+                7
+            </button> 
+            <button type="button" class = "bt" id="oito" onclick="digito(this)">
+                8
+            </button> 
+            <button type="button" class = "bt" id="nove" onclick="digito(this)">
+                9
+            </button>
+            <button type="button" class = "bt" id="resetar" onclick="resetar(this)">
+                C
+            </button> 
+            <button type="button" class = "bt" id="quatro" onclick="digito(this)">
+                4
+            </button> 
+            <button type="button" class = "bt" id="cinco" onclick="digito(this)">
+                5
+            </button> 
+            <button type="button" class = "bt" id="seis" onclick="digito(this)">
+                6
+            </button>
+            <button type="button" class = "bt" id="mais" onclick="calcular(this, 'somar')">
+                +
+            </button>  
+            <button type="button" class = "bt" id="um" onclick="digito(this)">
+                1
+            </button> 
+            <button type="button" class = "bt" id="dois" onclick="digito(this)">
+                2
+            </button> 
+            <button type="button" class = "bt" id="tres" onclick="digito(this)">
+                3
+            </button>
+            <button type="button" class = "bt" id="menos" onclick="calcular(this, 'subtrair')">
+                -
+            </button>
+            <button type="button" class = "bt" id="divisor" onclick="calcular(this, 'dividir')">
+                ÷
+            </button>    
+            <button type="button" class = "bt" id="zero" onclick="digito(this)">
+                0
+            </button> 
+            <button type="button" class = "bt" id="multiplicador" onclick="calcular(this, 'multiplicar')">
+                x
+            </button>
+            <button type="button" class = "bt" id="igual" onclick="resultado(this)">
+                =
+            </button> 
+        </div>
+        <h4>By Athos Balmant</h4>
+        </br></br></br>
+        <div>
+            <h3>Calculadora Simples do Exercício</h3>
+            <input type="number" id="numero1" value="0">
+            <input type="number" id="numero2" value="0">
+            </br></br>
+            <button type="button" id="somar" onclick="calculoSimples('somar')">
+                +
+            </button>
+            <button type="button" id="subtrair" onclick="calculoSimples('subtrair')">
+                -
+            </button>
+            <button type="button" id="multiplicar" onclick="calculoSimples('multiplicar')">
+                *
+            </button>
+            <button type="button" id="dividir" onclick="calculoSimples('dividir')">
+                /
+            </button>
+            </br></br>
+            <label>Resultado:</label><p id="resultado"></p>
+        </div>
+    </body>
+</html>
