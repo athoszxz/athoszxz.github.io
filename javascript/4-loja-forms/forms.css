@@ -12,11 +12,11 @@ body {
     text-shadow: 0px 1px 9px #000000;
 	display: grid;
 	grid-template-areas: 
-    "header header header"
-    "nav section aside"
-    "footer footer footer";
+    "header header"
+    "nav section"
+    "footer footer";
 	grid-template-rows: 110px 1fr 70px;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr;
 	grid-gap: 0px;
     height: 100vh;
     margin: 0px;  
@@ -27,7 +27,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to bottom right, #12f5e9 0%, #06229c 100%);
+    background: linear-gradient(to bottom right, #271c4e 0%, #000000 100%);
     padding: 0px;
     margin: 0px;
     box-shadow: 0px 15px 30px #000000;
@@ -36,9 +36,9 @@ header {
 
 
 .logotipo {
-    width: 120px;
+    width: 110px;
     height: 90px;
-    border-radius: 50%;
+    border-radius: 60%;
     background-color: #52c498;
     box-shadow: 0px 1px 5px #000000;
     margin: 15px;
@@ -68,7 +68,7 @@ header {
 
 
 nav {
-	background: linear-gradient(to bottom right, #1fff75 0%, #014116 100%);
+	background: linear-gradient(to bottom right, #0a0f29 0%, #000000 100%);
 	grid-area: nav; 
 }
 
@@ -77,7 +77,7 @@ nav {
     grid-template-columns: 1fr;
     align-items: center;
     justify-items: center;
-    background: linear-gradient(to bottom right, #1fff75 0%, #014116 100%);
+    background: linear-gradient(to bottom right, #471fd8 0%, #000000 100%);
     padding: 10px;
     border-radius: 5%;
     box-shadow: 0px 15px 30px #000000;
@@ -99,6 +99,34 @@ nav {
     box-shadow: 0px 1px 5px #000000;
 }
 
+#form {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+    background: linear-gradient(to bottom right, #471fd8 0%, #000000 100%);
+    padding: 10px;
+    border-radius: 5%;
+    box-shadow: 0px 15px 30px #000000;
+    max-width: 300px;
+    margin: 3px;
+}
+
+.resultsec {
+    background-image: url("/dark-eyes.gif");
+}
+
+#fname{
+    margin-bottom: 15px;
+}
+#submit {
+    margin-top: 19px;
+}
+
+#resultado{
+    font-size: 30px;
+}
+
 #article1prg {
     font-size: 15px;
 }
@@ -114,7 +142,7 @@ aside {
 }
 
 footer {
-	background: #707070;
+	background: linear-gradient(to bottom right, #471fd8 0%, #000000 100%);
 	grid-area: footer;
 }
 
@@ -123,48 +151,6 @@ header, nav, section, aside, footer {
     
 }
 
-
-
-
-@media screen and (max-width: 1110px) {
-    body {
-        grid-template-areas: 
-        "header header"
-        "nav section"
-        "aside aside" 
-        "footer footer";
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 0px;
-        height: 100vh;
-        margin: 0px;  
-    }
-    
-    header {
-        grid-area: header;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: linear-gradient(to bottom right, #12f5e9 0%, #06229c 100%);
-        padding: 0px;
-        margin: 0px;
-        box-shadow: 0px 15px 30px #000000;
-        min-width: 350px;
-    }
-
-    .logotipo {
-        width: 100px;
-        height: 80px;
-
-    }
-    .nometitulo{
-        font-size: 22px;
-    }
-    .desctitulo{
-        font-size: 13px;
-    }
-    
-}
 
 @media screen and (max-width: 740px) {
     body {

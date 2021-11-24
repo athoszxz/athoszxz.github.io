@@ -1,10 +1,10 @@
-const fotoperfil = document.querySelector(".logotipo");
-const nomeperfil = document.querySelector(".nometitulo");
+const fotoperfil = document.querySelector(".fotoperfil");
+const nomeperfil = document.querySelector(".nomeperfil");
 const descperfil = document.querySelector(".descperfil");
-const desc = document.querySelector(".desctitulo");
-const el = document.querySelector(".article1title");
-const foto = document.querySelector(".foto-lontra2");
-const prg = document.querySelector("#article1prg");
+const desc = document.querySelector(".desc");
+const el = document.querySelector(".nome");
+const foto = document.querySelector(".cantor-foto");
+const prg = document.querySelector("#prg");
 const foto2 = document.querySelector("#cantor-foto2");
 const lista = document.querySelector("#lista");
 const link = document.querySelector("#link");
@@ -19,7 +19,7 @@ function header() {
 function main() {
     el.textContent = "Lontras dão as mãos";
     foto.src = "lontra2.gif";
-    prg.textContent = "Lontras dão as mãos para não flutuarem longe uma das outras."; 
+    prg.textContent = "lontras dão as mãos para não flutuarem longe uma das outras."; 
     link.textContent = "Fonte"
     link.href = "https://pt.wikipedia.org/wiki/Michael_Jackson";
 }
