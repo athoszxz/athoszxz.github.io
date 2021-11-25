@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Minha Página</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="text/javascript" src="js/main.js"></script>
+        <script src="node_modules/string-math/string-math.js"></script>
+    </head>
+    <body>
+        <h1>Calculadora</h1>
+
+        <div class="Calculadora">
+            
+            <div id="telaCalculadora">
+                <p id="textoCalculadora">
+                    0
+                </p>
+            </div>
+            <button type="button" class = "bt" id="sete" onclick="digito('7')">
+                7
+            </button> 
+            <button type="button" class = "bt" id="oito" onclick="digito('8')">
+                8
+            </button> 
+            <button type="button" class = "bt" id="nove" onclick="digito('9')">
+                9
+            </button>
+            <button type="button" class = "bt" id="resetar" onclick="resetar()">
+                C
+            </button> 
+            <button type="button" class = "bt" id="quatro" onclick="digito('4')">
+                4
+            </button> 
+            <button type="button" class = "bt" id="cinco" onclick="digito('5')">
+                5
+            </button> 
+            <button type="button" class = "bt" id="seis" onclick="digito('6')">
+                6
+            </button>
+            <button type="button" class = "bt" id="mais" onclick="digito('+')">
+                +
+            </button>  
+            <button type="button" class = "bt" id="um" onclick="digito('1')">
+                1
+            </button> 
+            <button type="button" class = "bt" id="dois" onclick="digito('2')">
+                2
+            </button> 
+            <button type="button" class = "bt" id="tres" onclick="digito('3')">
+                3
+            </button>
+            <button type="button" class = "bt" id="menos" onclick="digito('-')">
+                -
+            </button>
+            <button type="button" class = "bt" id="divisor" onclick="digito('/')">
+                ÷
+            </button>    
+            <button type="button" class = "bt" id="zero" onclick="digito('0')">
+                0
+            </button> 
+            <button type="button" class = "bt" id="multiplicador" onclick="digito('*')">
+                x
+            </button>
+            <button type="button" class = "bt" id="igual" onclick="resultado()">
+                =
+            </button> 
+        </div>
+    <h4 onclick="teste()">By Athos Balmant</h4>
+</html>
