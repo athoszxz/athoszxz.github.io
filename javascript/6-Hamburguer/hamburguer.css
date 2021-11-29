@@ -1,8 +1,219 @@
-.container-questao {
-    width: 100%;
-    height: 100%;
+* {
+    box-sizing: border-box; 
+}
+
+@keyframes click-wave {
+    0% {
+      height: 20px;
+      width: 20px;
+      opacity: 0.35;
+      position: relative;
+    }
+    100% {
+      height: 100px;
+      width: 100px;
+      margin-left: -80px;
+      margin-top: -80px;
+      opacity: 0;
+    }
+  }
+
+body { 
+    font-family: calibre, sans-serif;
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-shadow: 0px 2px 5px #000000;
+	display: grid;
+	grid-template-areas: 
+    "header header header"
+    "nav section section"
+    "footer footer footer";
+	grid-template-rows: 90px 1fr 70px;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 0px;
+    margin: 0px;  
+    background-image: url("picnic.jpg");
+}
+
+.header1 {
+    font-family: cursive, sans-serif;
+    grid-area: header;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(to bottom right, #cbce27 0%, #e22121 100%);
+    padding: 0px;
+    margin: 0px;
+    box-shadow: 1px 2px 19px #000000;
+    font-size: 1.3rem;
 }
+
+#container-form {
+    grid-area: nav;
+    display: grid;
+    grid-template-columns: 1fr; 
+    justify-content: flex-end;
+    align-items: flex-end;
+    align-content: flex-end;
+    background: linear-gradient(to bottom right, #1a4211 0%, #8ece98 100%);
+    border-radius: 3%;
+    margin: 17px;
+    box-shadow: 1px 2px 19px #000000;
+}
+
+.formularios {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0px;
+    padding: 0px;
+    grid-gap: 1px;
+    border-radius: 3%;
+}
+
+.container-questao {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    grid-gap: 5px;
+    margin: 5px;
+    padding: 5px;
+    background: linear-gradient(to bottom right, #dd9a9a 0%, #c40d0d 100%);
+    border-radius: 5%;
+}
+
+.legend {
+    margin-top: 15px;
+    border-radius: 5%;
+    font-size: 1rem;
+}
+
+.option{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+}
+
+.descricao-produtos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: flex-end;
+    align-items: flex-end;
+    grid-gap: 10px;
+    margin-top: 0px;
+    min-height: 4rem;
+    
+}
+
+.descricao-produtos > h3 {
+    min-width: 90px;
+    
+}
+
+
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    position: relative;
+    top: 13.33333px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    transition: all 0.15s ease-out 0s;
+    background: #ffffff;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 0.5rem;
+    margin-bottom: 0.7rem;
+    outline: none;
+    position: relative;
+    z-index: 1000;
+  }
+  input:hover {
+    background: #8de2c4;
+  }
+  input:checked::before {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    content: '✔';
+    background: #40e0d0;
+    display: inline-block;
+    font-size: 15.66667px;
+    text-align: center;
+    line-height: 20px;
+  }
+  input:checked::after {
+    -webkit-animation: click-wave 0.65s;
+    -moz-animation: click-wave 0.65s;
+    animation: click-wave 0.65s;
+    background: #40e0d0 !important;
+    content: '';
+    display: block;
+    position: relative;
+    z-index: 100;
+  }
+  input {
+    border-radius: 50%;
+  }
+  input::before {
+    border-radius: 50%;
+  }
+  input::after {
+    border-radius: 50%;
+  }
+
+  button{
+    background: #1a4211;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.15s ease-out 0s;
+    width: 100%;
+    max-width: 8rem;
+    box-shadow: 3px 1px 8px #000000;
+  }
+    button:hover {
+        background: #8ece98;
+    }
+  
+  #lista-pedidos {
+    grid-area: section;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    margin: 15px;
+    padding: 0px;
+    background: linear-gradient(to bottom right, #1a4211 0%, #8ece98 100%);
+    border-radius: 3%;
+    box-shadow: 1px 2px 19px #000000;
+}
+
+  #tabela-pedidos > tr:hover {
+    background-color: #181818;
+  }
+  

@@ -1,10 +1,3 @@
-const getValues = () => ({
-    paoValue: document.querySelector('input[name="pao"]:checked').value,
-    hamburguerValue: document.querySelector('input[name="hamburguer"]:checked').value,
-    saladaValue: document.querySelector('input[name="salada"]:checked').value,
-    queijoValue: document.querySelector('input[name="queijo"]:checked').value
-  })
-  
   function getDadosPao(value) {
     if(value === '1') {
       return {
@@ -105,12 +98,11 @@ const getValues = () => ({
   
   function registarPedido() {
     qtdePedido += 1
-    const {
-      paoValue,
-      hamburguerValue,
-      saladaValue,
-      queijoValue
-    } = getValues()
+    const paoValue = document.querySelector('input[name="pao"]:checked').value;
+    const hamburguerValue = document.querySelector('input[name="hamburguer"]:checked').value;
+    const saladaValue = document.querySelector('input[name="salada"]:checked').value;
+    const queijoValue = document.querySelector('input[name="queijo"]:checked').value;
+
     const dadosPao = getDadosPao(paoValue)
     const dadosHamburguer = getDadosHamburguer(hamburguerValue)
     const dadosSalada = getDadosSalada(saladaValue)

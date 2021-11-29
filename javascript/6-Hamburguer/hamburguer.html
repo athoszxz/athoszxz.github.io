@@ -8,163 +8,161 @@
     <link href="https: //fonts.googleapis.com/css2? família = Indie + Flor &amp;family = Lobster + Two &amp; family = Roboto: ital, wght @ 1.300 &amp; display = swap " rel=" stylesheet ">
   </head>
   <body id="body">
-    <header>
+    <header class="header1">
       <img src="assets/img/hamburguer.png" alt="">
-      <h1>Montando Hamburguer</h1>
+      <h1>Hamburgueria MC Podrão</h1>
       <img src="assets/img/icon2.png" alt="" style="margin-left: 20px;">
     </header>
-    <section id="background">
-  
+    <section id="container-form">
+      <h2>Monte seu Hambúrguer</h2>
+      <form class = "formularios" action="" method="">
+        <div>
+          <legend class="legend"> 1. Escolha seu pão:</legend>
+          <div class="container-questao" id="container-questao-atendimento">
+            <div>
+              <div class="option">
+                <input type="radio" id="pao-frances" name="pao" value="1" checked="">
+                <label for="pao-frances">
+                  <div class="descricao-produtos">
+                    <h3>Pão Simples</h3>
+                    <h4>R$3,00</h4>
+                  </div>
+                </label>
+              </div>
+              <div class="option">
+                <input type="radio" id="pao-australiano" name="pao" value="2">
+                <label for="pao-australiano">
+                  <div class="descricao-produtos">
+                    <h3>Pão Australiano</h3>
+                    <h4>R$8,00</h4>
+                  </div>
+                </label>
+              </div>
+              <div class="option">
+                <input type="radio" id="pao-brioche" name="pao" value="3">
+                <label for="pao-brioche">
+                  <div class="descricao-produtos">
+                    <h3>Pão de Brioche</h3>
+                    <h4>R$6,00</h4>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <legend class="legend">2. Escolha seu hambúrguer:</legend>
+          <div class="container-questao" id="container-questao-atendimento">
+            <div>
+              <div class="option">
+                <input type="radio" id="hamburguer-picanha" name="hamburguer" value="1" checked="">
+                <label for="hamburguer-picanha">
+                  <div class="descricao-produtos">
+                    <h3>Hambúrguer de picanha</h3>
+                    <h4>R$13,00</h4>
+                  </div>
+                </label>
+              </div>
+              <div class="option">
+                <input type="radio" id="hamburguer-costela" name="hamburguer" value="2">
+                <label for="hamburguer-costela">
+                  <div class="descricao-produtos">
+                    <h3>Hamburguer de costela</h3>
+                    <h4>R$10,00</h4>
+                  </div>
+                </label>
+              </div>
+              <div class="option">
+                <input type="radio" id="hamburguer-vegano" name="hamburguer" value="3">
+                <label for="hamburguer-vegano">
+                  <div class="descricao-produtos">
+                    <h3>Hamburguer Vegano</h3>
+                    <h4>R$12,00</h4>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <legend class="legend">3. Escolha sua salada:</legend>
+          <div class="container-questao" id="container-questao-atendimento">
+            <div>
+              <div class="option">
+                <input type="radio" id="salada-alface" name="salada" value="1" checked="">
+                <label for="salada-alface">
+                  <div class="descricao-produtos">
+                    <h3>Alface</h3>
+                    <h4>R$1,50</h4>
+                  </div>
+                </label>
+              </div>
+              <div class="option">
+                <input type="radio" id="salada-tomate" name="salada" value="2">
+                <label for="salada-tomate">
+                  <div class="descricao-produtos">
+                    <h3>Tomate</h3>
+                    <h4>R$1,50</h4>
+                  </div>
+                </label>
+              </div>
+              <div class="option">
+                <input type="radio" id="salada-sem-salada" name="salada" value="3">
+                <label for="salada-sem-salada">
+                  <div class="descricao-produtos">
+                    <h3>Sem salada</h3>
+                    <h4>R$0,00</h4>
+                  </div>
+                  <div></div>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <legend class="legend">4. Escolha seu Queijo:</legend>
+          <div class="container-questao" id="container-questao-atendimento">
+            <div>
+              <div class="option">
+                <input type="radio" id="queijo-mussarela" name="queijo" value="1" checked="">
+                <label for="queijo-mussarela">
+                  <div class="descricao-produtos"> 
+                    <h3>Mussarela</h3>
+                    <h4>R$3,00</h4>
+                  </div>
+                </label>
+              </div>
+              <div class="option">
+                <input type="radio" id="queijo-prato" name="queijo" value="2">
+                <label for="queijo-prato">
+                  <div class="descricao-produtos">
+                    <h3>Prato</h3>
+                    <h4>R$3,00</h4>
+                  </div>
+                </label>
+              </div>
+              <div class="option">
+                <input type="radio" id="queijo-cheddar" name="queijo" value="3">
+                <label for="queijo-cheddar">
+                  <div class="descricao-produtos">
+                    <h3>Cheddar</h3>
+                    <h4>R$5,00</h4>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <h2>Total: R$5,00</h2> -->   
+      </form>
+      <button type="button" onclick="registarPedido()">Confirmar</button>
     </section>
-    <section id="container">
-      <section id="container-form">
-        <h2>Monte seu hamburguer</h2>
-        <form action="" method="">
-          <div>
-            <legend>1. Escolha seu pão:</legend>
-            <div class="container-questao" id="container-questao-atendimento">
-              <div>
-                <div class="option">
-                  <input type="radio" id="pao-frances" name="pao" value="1" checked="">
-                  <label for="pao-frances">
-                    <div>
-                      <h3>Pão Simples</h3>
-                      <h4>R$3,00</h4>
-                    </div>
-                  </label>
-                </div>
-                <div class="option">
-                  <input type="radio" id="pao-australiano" name="pao" value="2">
-                  <label for="pao-australiano">
-                    <div>
-                      <h3>Pão Australiano</h3>
-                      <h4>R$8,00</h4>
-                    </div>
-                  </label>
-                </div>
-                <div class="option">
-                  <input type="radio" id="pao-brioche" name="pao" value="3">
-                  <label for="pao-brioche">
-                    <div>
-                      <h3>Pão de Brioche</h3>
-                      <h4>R$6,00</h4>
-                    </div>
-                  </label>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <legend>2. Escolha seu hambúrguer:</legend>
-            <div class="container-questao" id="container-questao-atendimento">
-              <div>
-                <div class="option">
-                  <input type="radio" id="hamburguer-picanha" name="hamburguer" value="1" checked="">
-                  <label for="hamburguer-picanha">
-                    <div>
-                      <h3>Hambúrguer de picanha</h3>
-                      <h4>R$13,00</h4>
-                    </div>
-                  </label>
-                </div>
-                <div class="option">
-                  <input type="radio" id="hamburguer-costela" name="hamburguer" value="2">
-                  <label for="hamburguer-costela">
-                    <div>
-                      <h3>Hamburguer de costela</h3>
-                      <h4>R$10,00</h4>
-                    </div>
-                  </label>
-                </div>
-                <div class="option">
-                  <input type="radio" id="hamburguer-vegano" name="hamburguer" value="3">
-                  <label for="hamburguer-vegano">
-                    <div>
-                      <h3>Hamburguer Vegano</h3>
-                      <h4>R$12,00</h4>
-                    </div>
-                  </label>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <legend>3. Escolha sua salada:</legend>
-            <div class="container-questao" id="container-questao-atendimento">
-              <div>
-                <div class="option">
-                  <input type="radio" id="salada-alface" name="salada" value="1" checked="">
-                  <label for="salada-alface">
-                    <div>
-                      <h3>Alface</h3>
-                      <h4>R$1,50</h4>
-                    </div>
-                  </label>
-                </div>
-                <div class="option">
-                  <input type="radio" id="salada-tomate" name="salada" value="2">
-                  <label for="salada-tomate">
-                    <div>
-                      <h3>Tomate</h3>
-                      <h4>R$1,50</h4>
-                    </div>
-                  </label>
-                </div>
-                <div class="option">
-                  <input type="radio" id="salada-sem-salada" name="salada" value="3">
-                  <label for="salada-sem-salada">
-                    <div>
-                      <h3>Sem salada</h3>
-                      <h4>R$0,00</h4>
-                    </div>
-                    <div></div>
-                  </label>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div>
-            <legend>4. Escolha seu Queijo:</legend>
-            <div class="container-questao" id="container-questao-atendimento">
-              <div>
-                <div class="option">
-                  <input type="radio" id="queijo-mussarela" name="queijo" value="1" checked="">
-                  <label for="queijo-mussarela">
-                    <div>
-                      <h3>Mussarela</h3>
-                      <h4>R$3,00</h4>
-                    </div>
-                  </label>
-                </div>
-                <div class="option">
-                  <input type="radio" id="queijo-prato" name="queijo" value="2">
-                  <label for="queijo-prato">
-                    <div>
-                      <h3>Prato</h3>
-                      <h4>R$3,00</h4>
-                    </div>
-                  </label>
-                </div>
-                <div class="option">
-                  <input type="radio" id="queijo-cheddar" name="queijo" value="3">
-                  <label for="queijo-cheddar">
-                    <div>
-                      <h3>Cheddar</h3>
-                      <h4>R$5,00</h4>
-                    </div>
-                  </label>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- <h2>Total: R$5,00</h2> -->
-          <button type="button" onclick="registarPedido()">Confirmar</button>
-        </form>
-      </section>
-      <section id="lista-pedidos">
-        <h2>Pedidos</h2>
-        <table id="tabela-pedidos">
-          <tbody><tr>
+  
+    <section id="lista-pedidos">
+      <h2 id="t-pedidos">Pedidos</h2>
+      <table id="tabela-pedidos">
+        <tbody>
+          <tr>
             <th>Pedido</th>
             <th>Pão</th>
             <th>Hambúrguer</th>
@@ -172,9 +170,10 @@
             <th>Queijo</th>
             <th>Total</th>
           </tr>
-        </tbody></table>
-      </section>
+        </tbody>
+      </table>
     </section>
     <script src="hamburguer.js"></script>
   
-  </body></html>
+  </body>
+</html>
