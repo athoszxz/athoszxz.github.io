@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br"><link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><style type="text/css" id="dark-mode-custom-style" lang="en"></style><style type="text/css" id="dark-mode-native-style" lang="en"></style><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburguer</title>
+    <link rel="stylesheet" href="quadro.css">
+    <link href="https: //fonts.googleapis.com/css2? família = Indie + Flor &amp;family = Lobster + Two &amp; family = Roboto: ital, wght @ 1.300 &amp; display = swap " rel=" stylesheet ">
+  </head>
+  <body id="body">
+    <header class="header1">
+      <img src="assets/img/hamburguer.png" alt="">
+      <h1>Escola de SpringField</h1>
+      <img src="assets/img/icon2.png" alt="" style="margin-left: 20px;">
+    </header>
+    <section id="container-form">
+      <h2>Castigo do Bart Simpson</h2>
+          <div class="container-questao" id="container-questao-atendimento">       
+              <h3>Digite quantas vezes Bart vai escrever no quadro:</h3>
+              <input type="number" id="input-quadro" name="quant"  min="1" max="110" value="2">    
+          </div>      
+      <button type="button" onclick="escrever()">Confirmar</button>
+    </section>
+  
+    <section id="lista-pedidos">
+      <svg id="svg-escrita" width="100%" height="100%" viewBox="-60 70 600 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+        <path id="path">
+           <animate attributeName="d" from="m0,110 h0" to="m0,110 h1100" dur="6.8s" begin="0s" fill="freeze" repeatCount="1"/>
+         </path>
+         <text font-size="20" font-family="Montserrat" fill='hsla(36, 95%, 85%, 1)'>
+           <textPath xlink:href="#path">
+             Bart Simpson tá doidão!! †
+           </textPath>
+         </text>
+       </svg>
+    </section>
+
+    <script src="quadro.js"></script>
+  
+  </body>
+</html>
