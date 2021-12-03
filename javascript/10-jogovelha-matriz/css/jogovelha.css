@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+#board {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2em;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.board-square {
+  background: lightblue;
+  display: inline-block;
+  margin: 0.5px;
+}
+
+.symbol {
+  text-align: center;
+}
+
+@media (max-width: 576px) {
+  #board {
+    grid-template-columns: 75px 75px 75px;
+    grid-template-rows: 75px 75px 75px;
+  }
+}
