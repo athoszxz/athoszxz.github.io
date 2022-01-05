@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en"><link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><style type="text/css" id="dark-mode-custom-style" lang="en"></style><style type="text/css" id="dark-mode-native-style" lang="en"></style><head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qual carro será o vencendor?</title>
+  <link rel="stylesheet" href="carro.css">
+</head>
+<body>
+  <h1 class="titulo-site">Corrida do grande Prêmio</h1>
+  <div class="info-car">
+      <p class="texto">
+          Um carrinho será gerado para cada jogador.
+          <br>
+          O ganhador de cada corrida ganha pontos de experiencia.
+          <br>
+          é necessário de 450xp por nível e o nivel máximo é 10.
+          <br>
+      </p>
+
+      <h3>Carrinhos gerados podem ser de uma das 3 raridades abaixo:</h3>
+
+      <div class="caixa-info1">
+          a. Popular: 60% de chances; <br>
+          b. Sport: 35% de chances; <br>
+          c. Super Sport: 5% de chances; <br>
+      </div>
+
+      <p class="texto">Cada carrinho possui 3 atributos: </p>
+      
+      <div class="caixa-grande-info">
+          <div class="caixa-info">
+              a. Velocidade máxima; <br>
+              • Popular: Min.: 180 km/h | Máx.: 200 km/h <br>
+              • Sport: Min.: 195 km/h | Máx.: 215 km/h <br>
+              • Super Sport: Min.: 210 km/h | Máx.: 230 km/h <br>
+          </div>
+          
+          <div class="caixa-info">
+              b. Velocidade mínima; <br>
+              • Popular: Min.: 110 km/h | Máx.: 130 km/h <br>
+              • Sport: Min.: 125 km/h | Máx.: 145 km/h <br>
+              • Super Sport: Min.: 140 km/h | Máx.: 160 km/h <br>
+          </div>
+          
+          <div class="caixa-info">
+              c. Derrapagem (%); <br>
+              • Popular: Min.: 3% | Máx.: 4% <br>
+              • Sport: Min.: 2% | Máx.: 3% <br>
+              • Super Sport: Min.: 1%| Máx.: 1.75% <br>
+          </div>
+      </div>
+  </div>
+  <form>
+      <input type="radio" name="tipo-corrida" id="corrida-rapida" value="10">
+      <label for="corrida-rapida">Corrida rápida (10 voltas)</label>
+      <input type="radio" name="tipo-corrida" id="grande-premio" value="70">
+      <label for="grande-premio">Grande prêmio (70 voltas)</label>
+      <input type="radio" name="tipo-corrida" id="enduro" value="160">
+      <label for="enduro">Enduro (160 voltas)</label>
+      <button type="button" onclick="iniciar()">Comece a corrida!</button>
+  </form>
+  <p id="ganhador">O vencedor é o Edna com 9 voltas em primeiro lugar</p>
+  <div class="carros-sorteados">
+      <p id="jogador-um">Pedro sorteou o carro popular</p>
+      <p id="jogador-dois">Juca sorteou o carro popular</p>
+      <p id="jogador-tres">Edna sorteou o carro Sport</p>
+  </div>
+  <div class="experiencia-jogadores">
+      <p id="jogador-um-xp"></p>
+      <p id="jogador-dois-xp"></p>
+      <p id="jogador-tres-xp"></p>
+  </div>
+  <br>
+  
+
+
+
+  <script type="text/javascript" src="carro.js"></script>
+
+</body>
+</html>

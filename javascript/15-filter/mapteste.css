@@ -1,0 +1,141 @@
+*{list-style: none; text-decoration: none; box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;}
+
+html{scroll-behavior: smooth;}
+body{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0; 
+    padding: 0; 
+    background: #f2f2f2;
+}
+
+.form-bg{
+    width: 330px;
+    background-image: linear-gradient(#fff, #eee);
+    box-shadow: 1px 1px 50px 0.2px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    margin: auto;
+}
+.form-bg h3{
+    width: 100%;
+    color: #fff;
+    padding: 8px;
+    font-size: 12pt;
+    background-color: #26d0ff;
+    text-align: center;
+    margin-top: 0;
+    border-radius: 8px 8px 0 0;
+}
+.form{
+    display: grid;
+    width: 100%;
+    row-gap: 10px;
+    column-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 15px;
+    margin: auto;
+}
+.form > input, .form > select{
+    width: 100%;
+    font-size: 9pt;
+    padding: 9px;
+    background-color: #EBECF0;
+    border-radius: 6px;
+    color: gray;
+    box-shadow:  inset 1px 1px 2px #BABECC, inset -1px -1px 2px #fff;
+    transition: all 0.2s ease-in-out;
+    appearance: none;
+    -webkit-appearance: none;
+    border: 0;
+    outline: 0;
+    text-shadow: 1px 1px 0 #fff;
+}
+.form > input:focus, .form > select:focus{
+    box-shadow:  inset 1px 1px 1px #BABECC, inset -1px -1px 2px #fff;    
+}
+option{
+    background-color: #fff;
+}
+.form > input{
+    grid-column: 1 / 3;
+}
+.form-number{
+    grid-column: 1 / 3;
+}
+.form label{
+    text-align: center;
+    padding: 20px;
+    grid-column: 1 / 3;
+}
+.form label input{
+    display: none;
+}
+.form label .box{
+    width: 20px;
+    height: 20px;
+    background-color: #eee;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.active{
+    transition: 0.3s;
+    background-color: #127e9c !important;
+}
+.form label sup{
+    font-size: 10px;  
+    color: gray;
+    cursor: pointer;
+}
+.form button{
+    transition: 0.3s;
+    width: 65%;
+    margin: auto;
+    margin-bottom: 15px;
+    font-size: 14pt;
+    padding: 5px;
+    color: #fff;
+    text-align: center;
+    background-color: #0f9ec5;
+    border-radius: 8px;
+    grid-column: 1 / 3;
+}.form button:hover{
+    transition: 0.3s;
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+#lista-pedidos{
+    display: grid;
+    text-align: center;
+    align-self: center;
+    align-content: center;
+    justify-content: center;
+}
+
+#tabela-pedidos {
+    background-color: #016c8a;
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#tabela-pedidos th{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .form-bg{
+        width: 100%;
+    }
+    .form{
+        width: 100%;
+    }
+    .form-preferency{
+        font-size: 8pt;
+    }
+}

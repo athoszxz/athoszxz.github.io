@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link type="text/css" rel="stylesheet" id="dark-mode-custom-link">
+  <link type="text/css" rel="stylesheet" id="dark-mode-general-link">
+  <style type="text/css" id="dark-mode-custom-style" lang="en"></style>
+  <style type="text/css" id="dark-mode-native-style" lang="en"></style>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="mapteste.css">
+  </head>
+  <body>
+    <div class="form-bg">
+      <h3> Formulário </h3>
+      <div class="form">
+          <input placeholder="Nome" id="nome" maxlength="50" name="nome" type="text" class="data">
+          <input placeholder="Data" id="data" name="data" type="date">
+          <input placeholder="Valor" id="valor"  name="valor" type="number">
+          
+         
+          <button type="button" onclick="adicionar()">Enviar</button>
+          <button type="button" onclick="calcular()">Calcular</button>
+          <button type="button" onclick="ordenarData()">Ordenar por Data</button>
+          <button type="button" onclick="ordenarNome()">Ordenar por Nome</button>
+          <input placeholder="Digite o nome" id="nomeFilter" maxlength="50" name="nomeFilter" type="text" class="data">
+          <button type="button" onclick="filtrarNome()">Filtrar por Nome</button>
+      </div>
+    </div>
+    <section id="lista-pedidos">
+        <h2 id="t-pedidos">Pedidos</h2>
+        <table id="tabela-pedidos">
+          <tr>
+            <th>Nome</th>
+            <th>Data de Vencimento</th>
+            <th>Valor</th>
+          </tr>
+        </table>
+    </section>
+    <script src="mapteste.js"></script>
+  </body>
+</html>

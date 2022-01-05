@@ -1,0 +1,53 @@
+body{
+    background-color: rgb(177, 252, 177);
+}
+  ul, #myUL {
+    list-style-type: none;
+  }
+
+  div {
+    border: 1px solid black;
+    margin: 5px;
+    padding: 5px;
+  }
+
+  p {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+  
+  }
+  
+  #myUL {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .caret {
+    cursor: pointer;
+    -webkit-user-select: none; /* Safari 3.1+ */
+    -moz-user-select: none; /* Firefox 2+ */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none;
+  }
+  
+  .caret::before {
+    content: "\25B6";
+    color: black;
+    display: inline-block;
+    margin-right: 6px;
+  }
+  
+  .caret-down::before {
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Safari */
+    transform: rotate(90deg);  
+  }
+  
+  .nested {
+    display: none;
+  }
+  
+  .active {
+    display: block;
+  }

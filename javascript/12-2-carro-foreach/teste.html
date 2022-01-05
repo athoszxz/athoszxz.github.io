@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link type="text/css" rel="stylesheet" id="dark-mode-custom-link">
+  <link type="text/css" rel="stylesheet" id="dark-mode-general-link">
+  <style type="text/css" id="dark-mode-custom-style" lang="en"></style>
+  <style type="text/css" id="dark-mode-native-style" lang="en"></style>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual carro será o vencendor?</title>
+    <link rel="stylesheet" href="carro.css">
+  </head>
+  <body>
+
+    <div class="form-bg">
+      <h3> Request for a quote! </h3>
+      <div class="form">
+          <input placeholder="Name" maxlength="50" name="form-name" type="text">
+          <input placeholder="Phone Number" maxlength="9" name="form-phone" type="text">
+          <input placeholder="City" maxlength="50" name="form-city" type="text">
+          <input placeholder="E-mail" maxlength="50" name="form-email" type="text">
+          
+          <select name="form-preferency" class="form-preferency">
+              <option value="">Preferency</option>
+          </select>
+          <select name="form-business" class="form-business">
+              <option value="">Business?</option>
+              <option value="Sim">Yes</option>
+              <option value="Não">No</option>
+          </select>
+          <select name="form-number" class="form-number">
+              <option value="">How many people?</option>
+          </select>
+
+          <label for="form-auth">
+              <input id="form-auth" type="checkbox">
+              <div class="box"></div>
+              <sup>
+                  I agree to give my information to be used to contact me.
+              </sup>
+          </label>
+
+          <h2>Get a quote</h2>
+      </div>
+    </div>
+
+    
+    <form>
+      <div>
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" class="data" />
+      </div>
+      <div>
+          <label for="data">Vencimento:</label>
+          <input type="date" id="data" class="data"/>
+      </div>
+      <div>
+          <label for="valor">Valor:</label>
+          <textarea id="valor" class="data"></textarea>
+      </div>
+      <button type="button" onclick="adicionar()">Enviar</button>
+  </form>
+  </br>
+    <button type="button" onclick="calcular()">Calcular Juros</button>
+    <table>
+      <tbody id="tabela">
+        <tr>
+          <th>Nome</th>
+          <th>Data de Vencimento</th>
+          <th>Valor</th>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <br>
+    <table>
+      <tbody id="tabela-client">
+        <tr>
+          <th>Nome</th>
+          <th>Data de Vencimento</th>
+          <th>Valor</th>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <br>
+    <table>
+      <tbody id="tabela-venc">
+        <tr>
+          <th>Data de Vencimento</th>
+          <th>Nome</th>
+          <th>Valor</th>
+        </tr>
+      </tbody>
+    </table>
+
+
+
+
+
+    <script type="text/javascript" src="teste.js"></script>
+
+  </body>
+</html>

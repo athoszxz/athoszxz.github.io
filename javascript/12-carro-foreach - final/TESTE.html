@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<style>
+table,th,td {
+  border : 1px solid black;
+  border-collapse: collapse;
+}
+th,td {
+  padding: 5px;
+}
+</style>
+<body>
+<h1>Formulário usando XMLHttpRequest</h1>
+<form action="">
+ID: <input type="text" id="txt1">
+</form>
+</br>
+<button type="button" onclick="searchId()">Buscar por ID</button>
+<br><br>
+<button type="button" onclick="searchName()">Buscar por Nome</button>
+<br><br>
+<button type="button" onclick="searchEmail()">Buscar por Nome</button>
+<br><br>
+<table id="demo"></table>
+
+<script>
+function searchId() {
+  let file = "dataset.xml"
+
+  fetch (file)
+  .then(x => x.text())
+  .then(data => {
+      const parser = new DOMParser();
+      const xml = parser.parseFromString(data, "application/xml");
+  var input = document.getElementById("txt1").value;
+  var size = input.length;
+  var i;
+  var xmlDoc = xml;
+  var table="<tr><th>ID</th><th>Nome</th><th>Email</th></tr>";
+  var x = xmlDoc.getElementsByTagName("RECORD");
+  if (input == null || input == ""){
+        document.getElementById("demo").innerHTML= "Você fez uma consulta vazia!";
+        return false;
+  }
+  if (!/^[0-9]+$/.test(input)){
+        document.getElementById("demo").innerHTML= "Somente números inteiros de 0-9 são aceitos!";
+        return false;
+  }
+  for (i = 0; i <x.length; i++) {
+        var firstname = xmlDoc.getElementsByTagName("ID")[i].childNodes[0].nodeValue;
+        var startString = firstname.substring(0,size);
+        if(parseInt(firstname) == parseInt(input)){
+              table += "<tr><td>" +
+              x[i].getElementsByTagName("ID")[0].childNodes[0].nodeValue +
+              "</td><td>" +
+              x[i].getElementsByTagName("NAME")[0].childNodes[0].nodeValue +
+              "</td><td>" +
+              x[i].getElementsByTagName("email")[0].childNodes[0].nodeValue +
+              "</td></tr>";
+         }
+  }
+  if(table.length == 50){
+        document.getElementById("demo").innerHTML = "Não existem produtos com o ‘id’ fornecido!";
+  }else{
+        document.getElementById("demo").innerHTML = table;
+  }
+});
+}
+
+function searchName() {
+  let file = "dataset.xml"
+
+  fetch (file)
+  .then(x => x.text())
+  .then(data => {
+      const parser = new DOMParser();
+      const xml = parser.parseFromString(data, "application/xml");
+  var input = document.getElementById("txt1").value;
+  var size = input.length;
+  var i;
+  var xmlDoc = xml;
+  var table="<tr><th>ID</th><th>Nome</th><th>Email</th></tr>";
+  var x = xmlDoc.getElementsByTagName("RECORD");
+  if (input == null || input == ""){
+        document.getElementById("demo").innerHTML= "Você fez uma consulta vazia!";
+        return false;
+  }
+  for (i = 0; i <x.length; i++) {
+        var firstname = xmlDoc.getElementsByTagName("NAME")[i].childNodes[0].nodeValue;
+        var startString = firstname.substring(0,size);
+        if(startString.toLowerCase == input.toLowerCase){
+              table += "<tr><td>" +
+              x[i].getElementsByTagName("ID")[0].childNodes[0].nodeValue +
+              "</td><td>" +
+              x[i].getElementsByTagName("NAME")[0].childNodes[0].nodeValue +
+              "</td><td>" +
+              x[i].getElementsByTagName("email")[0].childNodes[0].nodeValue +
+              "</td></tr>";
+         }
+  }
+  if(table.length == 50){
+        document.getElementById("demo").innerHTML = "Não existem produtos com o 'id' fornecido!";
+  }else{
+        document.getElementById("demo").innerHTML = table;
+  }
+});
+}
+
+function searchEmail() {
+  let file = "dataset.xml"
+
+  fetch (file)
+  .then(x => x.text())
+  .then(data => {
+      const parser = new DOMParser();
+      const xml = parser.parseFromString(data, "application/xml");
+  var input = document.getElementById("txt1").value;
+  var size = input.length;
+  var i;
+  var xmlDoc = xml;
+  var table="<tr><th>ID</th><th>Nome</th><th>Email</th></tr>";
+  var x = xmlDoc.getElementsByTagName("RECORD");
+  if (input == null || input == ""){
+        document.getElementById("demo").innerHTML= "Você fez uma consulta vazia!";
+        return false;
+  }
+  for (i = 0; i <x.length; i++) {
+        var firstname = xmlDoc.getElementsByTagName("email")[i].childNodes[0].nodeValue;
+        var startString = firstname.substring(0,size);
+        if(firstname.toLowerCase == input.toLowerCase){
+              table += "<tr><td>" +
+              x[i].getElementsByTagName("ID")[0].childNodes[0].nodeValue +
+              "</td><td>" +
+              x[i].getElementsByTagName("NAME")[0].childNodes[0].nodeValue +
+              "</td><td>" +
+              x[i].getElementsByTagName("email")[0].childNodes[0].nodeValue +
+              "</td></tr>";
+         }
+  }
+  if(table.length == 50){
+        document.getElementById("demo").innerHTML = "Não existem produtos com o 'id' fornecido!";
+  }else{
+        document.getElementById("demo").innerHTML = table;
+  }
+});
+}
+
+
+</script>
+</body>
+</html>
